@@ -1,0 +1,16 @@
+# Frontend
+insurance-frontend/node_modules/
+insurance-frontend/.env.local
+insurance-frontend/build/
+
+# Backend
+insurance-backend/.venv/
+insurance-backend/__pycache__/
+
+# Jupyter Notebooks
+insurance-data-manupulation/.venv/
+insurance-data-manupulation/__pycache__/
+insurance-data-manupulation/.ipynb_checkpoints/
+
+# Docker
+.env

@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:80"  # Port 80 interne (Nginx) → 3000 externe
+    environment:
+      - REACT_APP_API_URL=http://backend:8000  # URL de l'API
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/app:/app/app  # Montage du code pour le dev
+    environment:
+      - PYTHONUNBUFFERED=1
+
+ 
